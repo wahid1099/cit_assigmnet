@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/shop"
+        app:layout_constraintDimensionRatio="5:2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/topText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:text="Which One?"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <EditText
+        android:id="@+id/shoename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="Shoe name...."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topText" />
+
+
+    <Button
+        android:id="@+id/carSearchBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shoename" />
+
+
+    <ScrollView
+
+        app:layout_constraintTop_toBottomOf="@id/carSearchBtn"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:text="Shoe Name"
+                android:id="@+id/mName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:text="Shoe Price"
+                android:id="@+id/mPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/shoeimg"
+
+                android:layout_width="match_parent"
+                android:layout_height="120dp"/>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
